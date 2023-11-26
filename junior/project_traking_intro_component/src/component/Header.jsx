@@ -12,7 +12,7 @@ const Header = () => {
   }
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < 700) {
         setSetter("open");
       } else {
         setSetter("nav");
