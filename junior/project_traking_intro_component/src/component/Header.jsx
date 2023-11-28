@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <img src={logo} alt="" />
+      <img src={logo} alt="logo" />
       {/* {menu && (
         <dt>
           {projectContents.navbar.map((item, idx) => (

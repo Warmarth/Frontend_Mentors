@@ -46,7 +46,7 @@ header {
 .open {
   position: absolute;
   top: 0;
-  width: 20rem;
+  width: 90%;
   height: 20rem;
   background-color: #ededf6;
   text-transform: uppercase;
@@ -58,7 +58,7 @@ header {
   font-size: 1.3rem;
   text-align: center;
   border-radius: 10px;
-  transform: translate(clamp(5rem, 5vw + 15vw, 10rem), 5rem);
+  transform: translate(clamp(1rem, 1vw + 1vw, 10rem), 5rem);
   box-shadow: 0 5px 15px 15px rgba(0, 0, 0, 0.3);
   > ul {
     display: block;
@@ -142,7 +142,7 @@ button:focus-visible {
 .template p {
   word-spacing: 0.2rem;
   letter-spacing: 0.1rem;
-  font-size: clamp(1rem, 0.871rem + 2.676vw, 2rem);
+  font-size: clamp(1rem, 0.871rem + 1.678vw, 2rem);
 }
 .second_text {
   font-size: clamp(1rem, 0.871rem + 0.676vw, 1.1rem);
@@ -209,6 +209,7 @@ button:focus-visible {
   transition: all 0.1s linear;
   /* transform: translateY(5rem); */
 }
+
 /* @media screen and (min-width:550px) {
   .decoration{
      transform: translate(-45%, 8rem);
@@ -233,13 +234,7 @@ button:focus-visible {
   }
   
 }
-@media screen and (min-width:750px) {
-  .decoration{
-     transform: translate(-25%, 8rem);
-  }
-  
-} */
-
+ */
 
 @media screen and (min-width: 800px) {
   .illustration {
