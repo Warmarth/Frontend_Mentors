@@ -1,8 +1,23 @@
 import { projectContents } from "./data";
 
 const Hero = () => {
-  const { bg_img, name, nots, title, content, btn, pre } =
-    projectContents.projectpage;
+  const { name, nots, title, content, btn, pre } = projectContents.projectpage;
+
+ function updateDecorationTransform() {
+   const screenWidth = window.innerWidth;
+   const translationPercentage = Math.max(
+     0,
+     Math.min((800 - screenWidth) / 5, 50)
+   );
+
+   document.querySelector(
+     ".decoration"
+   ).style.transform = `translateX(-${translationPercentage}%) translateY(8rem)`;
+ }
+
+ window.addEventListener("load", updateDecorationTransform);
+ window.addEventListener("resize", updateDecorationTransform);
+
   return (
     <main className="hero">
       <div className="illustration">
