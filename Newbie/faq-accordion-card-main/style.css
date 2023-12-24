@@ -121,6 +121,12 @@ p {
     > .bg-down {
       transform: translate(0,-20rem);
     }
+    .image2{
+      background-image: url('./images/bg-pattern-desktop.svg');
+      width: fit-content;
+      height: 10;
+    }
+
   }
   section {
     width: 60rem;
