@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+  /* Primary Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  /* Background gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  /* Neutral  Text */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  --font-size: 12px;
+}
+img {
+  width: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  font-size: var(--font-size);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+}
+section {
+  background-color: var(--Light-grayish-blue);
+  width: 375px;
+  padding: 0 2rem;
+  margin: 0.5rem auto;
+  border-radius: 1rem;
+}
+.image2 {
+  display: none;
+}
+.image1 {
+  width: 17em;
+  margin: auto;
+  transform: translateY(-6rem);
+}
+
+.image1 .down {
+  transform: translateY(-3.7rem);
+  width: 200px;
+}
+
+span {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 9px solid orange;
+  transition: 0.3s;
+  /* margin-top: 5px; */
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+.demo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: .8rem .5rem;
+}
+.faq {
+  padding: auto 2rem;
+  padding-bottom: 2rem;
+  margin-top: -7rem;
+}
+.faq h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  /* padding-top: 1rem; */
+}
+.tag h2 {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.99rem;
+}
+
+.tag h2:hover {
+  color: #de1a1a;
+  font-weight: 700;
+}
+p {
+  transition: 0.3s;
+  padding-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    display: block;
+    width: 30em;
+    > .bg-up {
+      transform: translate(0,10rem);
+    }
+    > .bg-mid {
+      transform: translate(-3rem,-1rem);
+      width: 10rem;
+    }
+    > .bg-down {
+      transform: translate(0,-20rem);
+    }
+  }
+  section {
+    width: 60rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
