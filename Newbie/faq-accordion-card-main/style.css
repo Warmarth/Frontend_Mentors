@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
 }
+/* for the rotate  function */
+
 :root {
   /* Primary Text */
   --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
@@ -18,121 +20,144 @@
   --Light-grayish-blue: hsl(240, 5%, 91%);
   --font-size: 12px;
 }
-img {
-  width: 100%;
-}
-
-body {
-  height: 100%;
-}
-
-main {
+.main {
   background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
-  font-size: var(--font-size);
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: var(--font-size);
+  justify-content: center;
+  /* background-color: var(--Light-grayish-blue); */
 }
-section {
-  background-color: var(--Light-grayish-blue);
-  width: 375px;
-  padding: 0 2rem;
-  margin: 0.5rem auto;
-  border-radius: 1rem;
-}
-.image2 {
-  display: none;
-}
-.image1 {
-  width: 17em;
-  margin: auto;
-  transform: translateY(-6rem);
-}
-
-.image1 .down {
-  transform: translateY(-3.7rem);
-  width: 200px;
-}
-
-span {
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 9px solid orange;
-  transition: 0.3s;
-  /* margin-top: 5px; */
-}
-
 .rotate {
   transform: rotate(180deg);
 }
-.demo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: .8rem .5rem;
+.Faq-body {
+  width: 375px;
+  background-color: white;
+  border-radius: 10px;
+  /* background-color: violet; */
 }
-.faq {
-  padding: auto 2rem;
-  padding-bottom: 2rem;
-  margin-top: -7rem;
+.headsection {
+  height: 15rem;
+  /* width: inherit; */
 }
-.faq h1 {
+.bg-mid {
+  display: none;
+}
+.image1 {
+  height: 11rem;
+  transform: translateY(-5rem);
+  background-image: url("./images/illustration-woman-online-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.image1::after {
+  content: "";
+  background-image: url("./images/bg-pattern-mobile.svg");
+  height: 10rem;
+  width: 15rem;
+  position: absolute;
+  background-repeat: no-repeat;
+  transform: translate(4.2rem, 6rem);
+}
+.FAQ {
+  margin-top: -5rem;
+  font-size: 0.597rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* background-color: var(--Soft-violet); */
+}
+.FAQ h1 {
   font-size: 2rem;
   text-align: center;
+  padding: 0.656rem auto 0;
 }
-.tag {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  /* padding-top: 1rem; */
-}
-.tag h2 {
-  color: var(--Dark-grayish-blue);
-  font-size: 0.99rem;
+.FAQ .tag {
+  padding: 1rem 0.5rem;
+  max-width: 24rem;
+  font-weight: 300;
+  transition: all linear 0.3s;
+  > h2 {
+    font-size: 1rem;
+  }
+  > p {
+    font-size: 13px;
+  }
+  > h2:hover {
+    color: var(--Soft-red);
+    font-weight: 700;
+  }
 }
 
-.tag h2:hover {
-  color: #de1a1a;
-  font-weight: 700;
-}
-p {
+span {
+  margin-top: 1rem;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 9px solid black;
   transition: 0.3s;
-  padding-bottom: 5px;
+}
+.demo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+h2:hover .demo span {
+  transform: scale(1.1);
+  margin-right: 5px;
+}
+.FAQ hr {
+  height: 1px;
+  border: none;
+  background-color: var(--Light-grayish-blue);
 }
 
 @media screen and (min-width: 768px) {
-  .image1 {
-    display: none;
-  }
-  .image2 {
-    display: block;
-    width: 30em;
-    > .bg-up {
-      transform: translate(0,10rem);
-    }
-    > .bg-mid {
-      transform: translate(-3rem,-1rem);
-      width: 10rem;
-    }
-    > .bg-down {
-      transform: translate(0,-20rem);
-    }
-    .image2{
-      background-image: url('./images/bg-pattern-desktop.svg');
-      width: fit-content;
-      height: 10;
-    }
-
-  }
-  section {
-    width: 60rem;
-    height: 30rem;
+  .Faq-body {
+    /* background-color: aliceblue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 900px;
+    height: 500px;
+  }
+  .headsection {
+    width: 30rem;
+    height: inherit;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .image1 {
+    height: 20rem;
+    /* width: 100%; */
+    background-image: url("./images/illustration-woman-online-desktop.svg");
+    /* transform: translate(4.2rem, 6rem); */
+    margin-top: 12rem;
+    margin-left: -12rem;
+  }
+  .image1::after {
+    content: "";
+    height: 50rem;
+    width: 60rem;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    transform: translate(-25.5rem, -24rem);
+  }
+  .bg-mid {
+    display: block;
+    position: absolute;
+    transform: translate(-6rem, -18rem);
+    /* overflow-x: visible; */
+  }
+  .FAQ {
+    margin-top: 0;
+    width: 25rem;
+  }
+  .FAQ h1 {
+    padding: 0.7rem;
+    text-align: left;
+  }
+  .FAQ .tag {
+    padding: 0.84rem 1rem;
   }
 }
