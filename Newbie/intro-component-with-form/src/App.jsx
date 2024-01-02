@@ -6,7 +6,7 @@ import HoldText from "./components/HoldText";
 function App() {
   return (
     <main className="main">
-      <div>
+      <div className="intro">
         <Header
           headingText="Learn to code by watching others"
           headingStyle="header"
@@ -17,7 +17,7 @@ function App() {
           paraStyle="para"
         />
       </div>
-      <section>
+      <section className="formcontent">
         <Forms />
       </section>
     </main>

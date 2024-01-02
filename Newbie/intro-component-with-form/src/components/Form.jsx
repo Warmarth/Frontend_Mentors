@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
-import "../App.css";
+// import ";
 
 const Forms = () => {
   const formData = {
@@ -66,16 +66,15 @@ const Forms = () => {
     });
   };
 
-useEffect 
+  useEffect;
   const handleClick = (e) => {
     e.preventDefault();
   };
 
-
   return (
-    <>
-      <div>
-        <strong>Try it free 7 days</strong> then $20/mo. thereafter
+    <div className="form"> 
+      <div className="headingText">
+        <span>Try it free 7 days</span> then $20/month thereafter
       </div>
       <form>
         {inputs.map((input) => {
@@ -89,12 +88,12 @@ useEffect
           );
         })}
         <Button buttonText={`Claim your free trial`} onClick={handleClick} />
-      </form>
       <footer>
         By clicking the button, you are agreeing to our
         <span>Terms and Services</span>
       </footer>
-    </>
+      </form>
+    </div>
   );
 };
 
