@@ -96,14 +96,14 @@ button {
 }
 .error {
   display: none;
-  font-size: 12px;
+  font-size: 10px;
 }
+
 input:invalid[focused="true"] ~ .error,
-input:invalid[focused="true"]::placeholder {
+input:invalid[focused="true"]::placeholder{
   color: var(--primary-Red);
   display: block;
 }
-
 input:invalid[focused="true"] {
   border: 1px solid var(--primary-Red);
   background-image: url("./images/icon-error.svg");

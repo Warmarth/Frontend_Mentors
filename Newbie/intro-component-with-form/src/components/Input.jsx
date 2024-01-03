@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Input = (props) => {
   const [focus, setFocus] = useState(false);
-  const { id, onChange, value, errorMessage, ...inputprops } = props;
+  const { id, onChange, value, error, errorMessage, ...inputprops } = props;
   const HandleFocus = (e) => {
     setFocus(true);
   };
@@ -15,7 +15,12 @@ const Input = (props) => {
         onBlur={HandleFocus}
         focused={focus.toString()}
       />
-      {focus && <span className="error">{errorMessage}</span>}
+      {error && (
+        <span style={{ color: "red", fontSize: "12px", float: "right" }}>
+          {error}
+        </span>
+      )}
+      {/* {focus && <span className="error">{errorMessage}</span>} */}
     </>
   );
 };
