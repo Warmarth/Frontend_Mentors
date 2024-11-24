@@ -114,12 +114,13 @@ body {
   .btn {
     margin-right: 2px;
     margin-top: 10px;
-    padding: 5px;
+    padding: 0.5rem;
     isolation: isolate;
     border-radius: 50%;
     border: none;
     background-color: var(--Light-Grayish-Blue);
     z-index: 20;
+    cursor: pointer;
   }
 
   .dont {
@@ -148,13 +149,29 @@ body {
     padding-left: 1rem;
     letter-spacing: 5.55px;
   }
+
+  .share_btn {
+    fill: #6e8098;
+    background-color: inherit;
+  }
+
+  .btn_new {
+    background-color: #6e8098;
+    .share_btn {
+      fill: white;
+    }
+  }
+}
+svg {
+  fill: white;
 }
 
 @media screen and (min-width: 1025px) {
   .container {
     position: relative;
     display: flex;
-    width: 745px;
+    gap: 1.1rem;
+    width: 735px;
     height: 280px;
   }
 
@@ -167,7 +184,7 @@ body {
   }
   .drawer {
     height: 100%;
-    width: 38%;
+    width: 39.5%;
     border-radius: 10px 0 0 10px;
   }
 
@@ -175,7 +192,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    padding: 1rem 3rem 1rem 1rem;
+    flex: 1;
+    gap: 1rem;
   }
 
   .card_header {

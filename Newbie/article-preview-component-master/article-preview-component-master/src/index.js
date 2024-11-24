@@ -1,6 +1,7 @@
 const social = document.querySelector("#social");
 const a_tag_collection = document.querySelectorAll("a");
 const button = document.querySelector("button");
+const share = document.querySelector("#share_btn");
 
 let width = window.matchMedia("(min-width: 1025px)").matches;
 
@@ -11,15 +12,18 @@ for (let a of a_tag_collection) {
   }
 }
 
+// social.backgroundColor = "red";
 const handelClickSmall = (determiner) => {
   if (!determiner) {
     social.classList.toggle("sm_share");
+    button.classList.toggle("btn_new");
   }
 };
 
 const handelClickBig = (determiner) => {
   if (determiner) {
     social.classList.toggle("bg_share");
+    button.classList.toggle("btn_new");
   }
 };
 
