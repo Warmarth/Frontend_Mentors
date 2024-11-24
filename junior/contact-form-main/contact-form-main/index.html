@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <form action="">
+      <label for=""> First Name</label>
+      <input type="text" />
+      <p>This field is required</p>
+      <label for=""> Last Name</label>
+      <input type="text" />
+      <p>This field is required</p>
+      <label for="">Email Address</label>
+      <input type="email" />
+      <p>Please enter a valid email address</p>
+      <fieldset>
+        <label>Query Type</label>
+        <input type="radio" value=" General Enquiry" />General Enquiry
+        <input type="radio" value=" Support Request" />Support Request
+      </fieldset>
+      <p>Please select a query type</p>
+      <label for="">Message</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <p>This field is required</p>
+      <article>
+        <input type="checkbox" name="" id="" />
+        <span> I consent to being contacted by the team</span>
+      </article>
+      <p>To submit this form, please consent to being contacted</p>
+    </form>
+
+    <button>Submit</button>
+
+    This field is required
+
+    <div>
+      <span>
+        <img src="./assets/images/icon-checkbox-check.svg" alt="" />
+        <img src="./assets/images/icon-radio-selected.svg" alt="" />
+        <img src="./assets/images/icon-radio-selected.svg" alt="" />
+      </span>
+      <span>Message Sent!</span>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

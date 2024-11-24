@@ -11,8 +11,9 @@ function handleClick(tagId, span) {
   if (tag.style.display === "none") {
     tag.style.display = "block";
     span.classList.add("rotate");
+
   } else {
-    tag.style.display = "none";
+  tag.style.display = "none";
     span.classList.remove("rotate");
   }
 }

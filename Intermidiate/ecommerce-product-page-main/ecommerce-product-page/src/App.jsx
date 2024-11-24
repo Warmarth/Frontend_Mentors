@@ -1,38 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Header } from "./components/Header";
+import { Article } from "./components/Card_Article";
+import { Buttons } from "./components/Buttons";
+import CountProvider from "./Context";
+import { ImageDisplay } from "./components/DisplayImage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img
-            src={reactLogo}
-            className="logo react underline"
-            alt="React logo"
-          />
-        </a>
+    <CountProvider>
+      <div className=" font-kumbh w-80 lg:w-10/12 lg:max-w-5xl px-3 py-2 mx-auto duration-200">
+        <Header />
+        <section className="lg:grid grid-cols-2 justify-items-center duration-400 items-center justify-between ">
+          <ImageDisplay />
+          <section className=" space-y-4 lg:w-4/6 ">
+            <Article />
+            <Buttons />
+          </section>
+        </section>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code className="italic">src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </CountProvider>
   );
 }
 
