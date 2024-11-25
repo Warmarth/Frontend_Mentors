@@ -79,6 +79,7 @@ body {
   .card_text {
     font-size: 0.76rem;
     word-spacing: 2.5px;
+    font-weight: var(--base-font-weight);
     letter-spacing: 0.1px;
     line-height: 1.15rem;
     color: var(--Desaturated-Dark-Blue);
