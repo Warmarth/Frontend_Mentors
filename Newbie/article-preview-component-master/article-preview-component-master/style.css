@@ -98,14 +98,15 @@ body {
     list-style: normal;
     padding: 0.2rem 0rem;
 
-    h4 {
+    h3 {
       padding-top: 3px;
       padding-left: 1px;
     }
   }
 
-  .avatar_detail p {
+  .avatar_detail > p {
     color: var(--Grayish-Blue);
+    font-weight: var(--base-font-weight);
     font-size: small;
     padding-top: 1px;
     padding-left: 1px;

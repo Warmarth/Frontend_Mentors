@@ -1,6 +1,6 @@
 const social = document.querySelector("#social") as HTMLDivElement;
-const a_tag_collection = document.querySelectorAll("a");
 const button = document.querySelector("button") as HTMLButtonElement;
+const a_tag_collection = document.querySelectorAll("a");
 const share = document.querySelector("#share_btn");
 let width = window.matchMedia("(min-width: 1025px)").matches;
 let mediaQuery = window.matchMedia("(min-width: 1025px)");
