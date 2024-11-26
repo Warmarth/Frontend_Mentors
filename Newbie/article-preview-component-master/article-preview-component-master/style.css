@@ -99,9 +99,10 @@ body {
     list-style: normal;
     padding: 0.2rem 0rem;
 
-    h3 {
+    h2 {
       padding-top: 3px;
       padding-left: 1px;
+      font-size: var(--base-font-size);
     }
   }
 
