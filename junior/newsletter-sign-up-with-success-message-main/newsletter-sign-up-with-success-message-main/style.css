@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --primary-Tomato: hsl(4, 100%, 67%);
+  --font-family: "Roboto", sans-serif;
+  --font-size: 1rem;
+  --base-wight: 400;
+  --high-wight: 700;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 375px;
+  /* margin: auto; */
+}
+.dont {
+  display: none;
+}
+
+.message_container {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  /* margin: auto; */
+}
+
+.success_msg {
+  width: 375px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.success_msg div > h2 {
+  font-size: 2.5rem;
+  font-weight: var(--high-wight);
+}
+
+.success_msg div > p {
+  line-height: 1.5rem;
+}
+
+.success_msg div {
+  display: flex;
+  transform: translateY(30%);
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.success_msg button {
+  padding: 1.1rem;
+  width: 100%;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size);
+  cursor: pointer;
+  word-spacing: 1.3px;
+  line-height: 1.3rem;
+}
+
+.success_msg button:hover {
+  background-color: var(--primary-Tomato);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2.3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.4rem;
+}
+
+.new_letter_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.new_letter_card h1 {
+  font-size: 2.5rem;
+  word-spacing: -8px;
+}
+.new_letter_card p {
+  font-size: var(--font-size);
+  color: var(--Dark-Slate-Grey);
+  line-height: 1.35rem;
+}
+
+.quality_assurance {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quality_assurance li {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  line-height: 1.32rem;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1.2rem;
+}
+
+.form span {
+  position: absolute;
+}
+
+.form label {
+  font-size: 0.7rem;
+  color: var(--Dark-Slate-Grey);
+  word-spacing: 0.8px;
+}
+
+.form input {
+  padding: 1.1rem;
+  border: 1px solid var(--Grey);
+  border-radius: 5px;
+  font-size: var(--font-size);
+}
+
+button {
+  padding: 1.1rem;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size);
+  cursor: pointer;
+  word-spacing: 1.3px;
+  line-height: 1.3rem;
+}
+
+button:hover {
+  background-color: var(--primary-Tomato);
+}
+
+.error_msg {
+  color: red;
+  font-size: x-small;
+  right: 0;
+}
+
+.error_msg input {
+  background-color: rgba(224, 19, 19, 0.1);
+  width: 100%;
+  border: 2px solid var(--primary-Tomato);
+}
+
+.error_msg input::placeholder {
+  color: red;
+}
+
+@media screen and (min-width: 1020px) {
+  .main_content {
+    padding: 1rem;
+    width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .message_container {
+    height: 100vh;
+    width: inherit;
+    background-color: var(--Dark-Slate-Grey);
+    /* margin: auto; */
+  }
+
+  .success_msg {
+    height: 32.5rem;
+    width: 31.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0rem 4rem;
+    font-size: var(--font-size);
+    box-shadow: 0 0 6px;
+    border-radius: 2rem;
+  }
+  .success_msg div > h2 {
+    font-size: 3.5rem;
+    font-weight: var(--high-wight);
+  }
+
+  .success_msg div {
+    transform: translateY(0);
+    gap: 1.3rem;
+  }
+
+  .succes s_msg button {
+    bottom: 0;
+    padding: 1.1rem;
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size);
+    cursor: pointer;
+    word-spacing: 1.3px;
+    line-height: 1.3rem;
+  }
+}
