@@ -20,6 +20,7 @@
 .message_card {
   position: absolute;
   opacity: 0;
+  display: none;
   top: 0;
   width: 100%;
   max-width: 330px;
@@ -35,8 +36,9 @@
 
 .add-msg{
   opacity: 1;
+  display: block;
 }
-.message_card h3 {
+.message_card h2 {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
