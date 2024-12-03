@@ -12,10 +12,13 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./style.css" />
+
     <title>Frontend Mentor | Contact form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -26,51 +29,81 @@
     </style>
   </head>
   <body>
-    <h1>Contact Us</h1>
-    <form action="">
-      <label for=""> First Name</label>
-      <input type="text" />
-      <p>This field is required</p>
-      <label for=""> Last Name</label>
-      <input type="text" />
-      <p>This field is required</p>
-      <label for="">Email Address</label>
-      <input type="email" />
-      <p>Please enter a valid email address</p>
-      <fieldset>
-        <label>Query Type</label>
-        <input type="radio" value=" General Enquiry" />General Enquiry
-        <input type="radio" value=" Support Request" />Support Request
-      </fieldset>
-      <p>Please select a query type</p>
-      <label for="">Message</label>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <p>This field is required</p>
-      <article>
-        <input type="checkbox" name="" id="" />
-        <span> I consent to being contacted by the team</span>
-      </article>
-      <p>To submit this form, please consent to being contacted</p>
-    </form>
+    <main>
+      <section class="form_section" id="form_section">
+        <h1>Contact Us</h1>
+        <form class="form_card" id="form" novalidate>
+          <!-- <div> -->
+          <div class="input_card">
+            <label for="FirstName"> First Name</label>
+            <input type="text" name="first" id="first" />
+            <span id="error_span" class="dont">This field is required</span>
+          </div>
+          <div class="input_card">
+            <label for="LastName"> Last Name</label>
+            <input type="text" name="last" id="last" />
+            <span id="error_span" class="dont">This field is required</span>
+          </div>
+          <div class="input_card">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" />
+            <span id="error_span" class="dont"
+              >Please enter a valid email address</span
+            >
+          </div>
+          <!-- </div> -->
+          <fieldset class="query_type" id="query_type">
+            <legend>Query Type</legend>
+            <div class="radio">
+              <div>
+                <input
+                  type="radio"
+                  name="Query-Type"
+                  value="General Enquiry"
+                  required
+                />
+                <label for="General Enquiry">General Enquiry</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="Query-Type"
+                  value="Support Request"
+                  required
+                />
+                <label for="Support Request"> Support Request</label>
+              </div>
+            </div>
+            <span id="error_span" class="dont">Please select a query type</span>
+          </fieldset>
+          <div class="textarea">
+            <label for="message">Message</label>
+            <textarea name="message" id="msg" cols="30" rows="11"></textarea>
+            <span id="error_span" class="dont">This field is required</span>
+          </div>
+          <div class="consent">
+            <article>
+              <input type="checkbox" name="consent" id="consent" />
+              <p>I consent to being contacted by the team</p>
+            </article>
+            <span id="error_span" class="dont"
+              >To submit this form, please consent to being contacted</span
+            >
+          </div>
+        </form>
+        <button type="submit">Submit</button>
+      </section>
 
-    <button>Submit</button>
-
-    This field is required
-
-    <div>
-      <span>
-        <img src="./assets/images/icon-checkbox-check.svg" alt="" />
-        <img src="./assets/images/icon-radio-selected.svg" alt="" />
-        <img src="./assets/images/icon-radio-selected.svg" alt="" />
-      </span>
-      <span>Message Sent!</span>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
-    </div>
-
-    <div class="attribution">
+      <div id="success_message" class="message_card">
+        <h3><span><img src="./assets/images/icon-success-check.svg" alt=""></span>Message Sent!</h3>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </main>
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
+    <script defer src="./dist/app.js"></script>
   </body>
 </html>
