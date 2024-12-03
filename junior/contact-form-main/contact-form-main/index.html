@@ -34,8 +34,8 @@
         <h1>Contact Us</h1>
         <form class="form_card" id="form" novalidate>
           <div class="input_card">
-            <label for="First">First Name</label>
-            <input type="text" name="first" id="first" aria-label="first" />
+            <label for="first">First Name</label>
+            <input type="text" name="first" id="first" />
             <span id="error_span" class="dont">This field is required</span>
           </div>
           <div class="input_card">
@@ -60,7 +60,7 @@
                   value="General Enquiry"
                   required
                 />
-                <label for="General Enquiry">General Enquiry</label>
+                <label for="Query-Type">General Enquiry</label>
               </div>
               <div>
                 <input
@@ -69,7 +69,7 @@
                   value="Support Request"
                   required
                 />
-                <label for="Support Request"> Support Request</label>
+                <label for="Query-Type"> Support Request</label>
               </div>
             </div>
             <span id="error_span" class="dont">Please select a query type</span>
@@ -82,7 +82,7 @@
           <div class="consent">
             <article>
               <input type="checkbox" name="consent" id="consent" />
-              <p>I consent to being contacted by the team</p>
+              <label>I consent to being contacted by the team</label>
             </article>
             <span id="error_span" class="dont"
               >To submit this form, please consent to being contacted</span

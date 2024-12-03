@@ -34,7 +34,7 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.add-msg{
+.add-msg {
   opacity: 1;
   display: block;
 }
@@ -228,7 +228,7 @@ main {
 .consent article input[type="checkbox"]:checked::after {
   display: block;
 }
-.consent article p {
+.consent article label {
   font-size: calc(var(--font-size) * 0.8px);
 }
 
