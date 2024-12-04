@@ -3,7 +3,7 @@ const success_message = document.getElementById("success_message");
 const first = document.querySelector("#first");
 const last = document.querySelector("#last");
 const email = document.querySelector("#email");
-const msg = document.querySelector("#msg");
+const msg = document.querySelector("#message");
 const form = document.querySelector("form");
 const radio = document.querySelectorAll(`input[type="radio"]`);
 const queryTypeFieldset = document.getElementById("query_type");
