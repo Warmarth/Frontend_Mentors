@@ -36,55 +36,71 @@
           <div class="input_card">
             <label for="first">First Name</label>
             <input type="text" name="first" id="first" />
-            <span id="error_span" class="dont">This field is required</span>
+            <span class="dont">This field is required</span>
           </div>
           <div class="input_card">
             <label for="last"> Last Name</label>
             <input type="text" name="last" id="last" />
-            <span id="error_span" class="dont">This field is required</span>
+            <span class="dont">This field is required</span>
           </div>
           <div class="input_card">
             <label for="email">Email Address</label>
             <input type="email" name="email" id="email" />
-            <span id="error_span" class="dont"
-              >Please enter a valid email address</span
-            >
+            <span class="dont">Please enter a valid email address</span>
           </div>
           <fieldset class="query_type" id="query_type">
-            <legend aria-labelledby="Query-Type">Query Type</legend>
+            <legend id="query-type-legend">Query Type</legend>
             <div class="radio">
               <div>
                 <input
                   type="radio"
+                  id="general-enquiry"
                   name="Query-Type"
                   value="General Enquiry"
                   required
+                  aria-labelledby="general-enquiry-label query-type-legend"
                 />
-                <label for="Query-Type">General Enquiry</label>
+                <label id="general-enquiry-label" for="general-enquiry"
+                  >General Enquiry</label
+                >
               </div>
               <div>
                 <input
                   type="radio"
+                  id="support-request"
                   name="Query-Type"
                   value="Support Request"
                   required
+                  aria-labelledby="support-request-label query-type-legend"
                 />
-                <label for="Query-Type"> Support Request</label>
+                <label id="support-request-label" for="support-request"
+                  >Support Request</label
+                >
               </div>
             </div>
-            <span id="error_span" class="dont">Please select a query type</span>
+            <span class="dont" aria-live="polite"
+              >Please select a query type</span
+            >
           </fieldset>
+
           <div class="textarea">
             <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="11"></textarea>
-            <span id="error_span" class="dont">This field is required</span>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="11"
+            ></textarea>
+            <span class="dont">This field is required</span>
           </div>
           <div class="consent">
             <article>
               <input type="checkbox" name="consent" id="consent" />
-              <label for="consent">I consent to being contacted by the team</label>
+              <label for="consent"
+                >I consent to being contacted by the team</label
+              >
             </article>
-            <span id="error_span" class="dont"
+            <span class="dont"
               >To submit this form, please consent to being contacted</span
             >
           </div>
@@ -93,7 +109,11 @@
       </section>
 
       <div id="success_message" class="message_card">
-        <h2><span><img src="./assets/images/icon-success-check.svg" alt=""></span>Message Sent!</h2>
+        <h2>
+          <span
+            ><img src="./assets/images/icon-success-check.svg" alt="" /></span
+          >Message Sent!
+        </h2>
         <p>Thanks for completing the form. We'll be in touch soon!</p>
       </div>
     </main>
