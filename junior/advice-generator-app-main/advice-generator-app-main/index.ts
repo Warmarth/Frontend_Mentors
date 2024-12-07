@@ -90,7 +90,7 @@ interface Quote {
 
 const API_KEY =
   window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
-const button = <HTMLButtonElement>document.querySelector("button")!;
+const button = <HTMLButtonElement>document.querySelector("#dice")!;
 const advice = <HTMLParagraphElement>document.querySelector("#advice")!;
 const author = <HTMLSpanElement>document.querySelector("#author")!;
 

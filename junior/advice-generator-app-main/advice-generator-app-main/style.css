@@ -79,7 +79,7 @@ article p {
   color: var(--primary-neon-green);
 }
 
-button {
+.dice {
   height: 4rem;
   width: 4rem;
   background-color: var(--primary-neon-green);
@@ -95,11 +95,11 @@ button {
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
+.dice:hover {
   background-color: hsl(150, 100%, 50%);
   box-shadow: 0 0 10px 0 hsl(150, 100%, 50%);
 }
-button:hover .icon {
+.dice:hover .icon {
   background-color: hsl(150, 100%, 50%);
   box-shadow: 0 0 10px 0 hsl(150, 100%, 50%);
   animation: rotate3d 5s infinite linear;

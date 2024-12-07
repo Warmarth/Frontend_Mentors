@@ -82,7 +82,7 @@ const randomQoute = () => {
     return quotesStore[Math.floor(Math.random() * quotesStore.length)];
 };
 const API_KEY = window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
-const button = document.querySelector("button");
+const button = document.querySelector("#dice");
 const advice = document.querySelector("#advice");
 const author = document.querySelector("#author");
 const categories = "amazing";
