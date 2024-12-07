@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 const quotesStore = [
     {
         quote: "The only way to do great work is to love what you do.",
@@ -81,35 +72,44 @@ const quotesStore = [
 const randomQoute = () => {
     return quotesStore[Math.floor(Math.random() * quotesStore.length)];
 };
-const API_KEY = window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
+// interface Window {
+//   API_KEY: string;
+// }
+// interface Quote {
+//   quote: string;
+//   author: string;
+//   category?: string;
+// }
+// const API_KEY =
+//   window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
 const button = document.querySelector("#dice");
 const advice = document.querySelector("#advice");
 const author = document.querySelector("#author");
-const categories = "amazing";
-const headers = new Headers({
-    "X-Api-Key": API_KEY,
-    "Content-Type": "application/json",
-});
+// const categories = "amazing";
+// const headers = new Headers({
+//   "X-Api-Key": API_KEY,
+//   "Content-Type": "application/json",
+// });
 button.addEventListener("click", () => {
     // const quotes: Quote = { quote: "", author: "" };
     // getQoute(categories, quotes);
     advice.textContent = randomQoute().quote;
     author.textContent = randomQoute().author;
 });
-function getQoute(categories, quotes) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const response = yield fetch(`https://api.api-ninjas.com/v1/quotes?category=${categories}`, {
-                method: "GET",
-                headers: headers,
-            });
-            const data = yield response.json();
-            quotes = yield data[0];
-            advice.textContent = quotes.quote;
-            author.textContent = quotes.author;
-        }
-        catch (error) {
-            console.error(error);
-        }
-    });
-}
+// async function getQoute(categories: string, quotes: Quote) {
+//   try {
+//     const response = await fetch(
+//       `https://api.api-ninjas.com/v1/quotes?category=${categories}`,
+//       {
+//         method: "GET",
+//         headers: headers,
+//       }
+//     );
+//     const data = await response.json();
+//     quotes = await data[0];
+//     advice.textContent = quotes.quote;
+//     author.textContent = quotes.author;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }

@@ -79,26 +79,27 @@ const randomQoute = () => {
   return quotesStore[Math.floor(Math.random() * quotesStore.length)];
 };
 
-interface Window {
-  API_KEY: string;
-}
-interface Quote {
-  quote: string;
-  author: string;
-  category?: string;
-}
+// interface Window {
+//   API_KEY: string;
+// }
+// interface Quote {
+//   quote: string;
+//   author: string;
+//   category?: string;
+// }
 
-const API_KEY =
-  window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
+// const API_KEY =
+//   window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
+
 const button = <HTMLButtonElement>document.querySelector("#dice")!;
 const advice = <HTMLParagraphElement>document.querySelector("#advice")!;
 const author = <HTMLSpanElement>document.querySelector("#author")!;
 
-const categories = "amazing";
-const headers = new Headers({
-  "X-Api-Key": API_KEY,
-  "Content-Type": "application/json",
-});
+// const categories = "amazing";
+// const headers = new Headers({
+//   "X-Api-Key": API_KEY,
+//   "Content-Type": "application/json",
+// });
 
 button.addEventListener("click", () => {
   // const quotes: Quote = { quote: "", author: "" };
@@ -107,21 +108,21 @@ button.addEventListener("click", () => {
   author.textContent = randomQoute().author;
 });
 
-async function getQoute(categories: string, quotes: Quote) {
-  try {
-    const response = await fetch(
-      `https://api.api-ninjas.com/v1/quotes?category=${categories}`,
-      {
-        method: "GET",
-        headers: headers,
-      }
-    );
+// async function getQoute(categories: string, quotes: Quote) {
+//   try {
+//     const response = await fetch(
+//       `https://api.api-ninjas.com/v1/quotes?category=${categories}`,
+//       {
+//         method: "GET",
+//         headers: headers,
+//       }
+//     );
 
-    const data = await response.json();
-    quotes = await data[0];
-    advice.textContent = quotes.quote;
-    author.textContent = quotes.author;
-  } catch (error) {
-    console.error(error);
-  }
-}
+//     const data = await response.json();
+//     quotes = await data[0];
+//     advice.textContent = quotes.quote;
+//     author.textContent = quotes.author;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
