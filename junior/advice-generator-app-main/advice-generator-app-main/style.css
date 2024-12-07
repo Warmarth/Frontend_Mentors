@@ -1,0 +1,128 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"); */
+
+:root {
+  /* Colors */
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+  --neutral-grayish-blue: hsl(217, 19%, 38%);
+  --neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%);
+
+  /* Typography */
+  --font-family: "Manrope", sans-serif;
+  --font-weight-bold: 800;
+  --font-size-quote: 28px;
+
+  /* Design Constraints */
+  --design-width-mobile: 375px;
+  --design-width-desktop: 1440px;
+
+  /* Additional variables for spacing */
+  --padding-base: 1rem;
+  --margin-base: 1rem;
+}
+* body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--neutral-grayish-blue);
+  background-color: var(--neutral-dark-blue);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-bottom: 0;
+  background-color: var(--neutral-dark-grayish-blue);
+  border-radius: 8px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-neon-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+article div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article p {
+  font-size: 1.7rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-light-cyan);
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0 2rem;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: var(--primary-neon-green);
+}
+
+button {
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--primary-neon-green);
+  color: var(--neutral-dark-blue);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  border: none;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(2rem);
+  perspective: 1000px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: hsl(150, 100%, 50%);
+  box-shadow: 0 0 10px 0 hsl(150, 100%, 50%);
+}
+button:hover .icon {
+  background-color: hsl(150, 100%, 50%);
+  box-shadow: 0 0 10px 0 hsl(150, 100%, 50%);
+  animation: rotate3d 5s infinite linear;
+}
+
+.icon {
+  fill: var(--neutral-dark-blue);
+}
+
+@media screen and (min-width: 735px) {
+  article {
+    max-width: 500px;
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg); /* Starting position */
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(0deg); /* 90 degrees along Y axis */
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(0deg); /* 180 degrees along Y axis */
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(0deg); /* 270 degrees along Y axis */
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg); /* Full rotation */
+  }
+}

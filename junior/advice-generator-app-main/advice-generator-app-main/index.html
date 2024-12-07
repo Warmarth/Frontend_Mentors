@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Link to your CSS file -->
+    <script src="./config.js"></script>
+    <script defer src="./dist/index.js"></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>
+        <h1>
+          Advice #<span><!-- Advice ID goes here -->117</span>
+        </h1>
+        <p id="advice">
+          "<!-- Advice text goes here -->
+          it easy to set up and take notice, what's difficult getting up and
+          taking action. "
+        </p>
+        <span class="author" id="author">#frontendmentor</span>
+        <picture>
+          <source
+            srcset="./images/pattern-divider-mobile.svg"
+            media="(max-width:735px)"
+          />
+          <source
+            srcset="./images/pattern-divider-desktop.svg"
+            media="(min-width:735px)"
+          />
+
+          <img
+            src="./images/pattern-divider-mobile.svg"
+            alt="divider"
+            id="divider"
+          />
+        </picture>
+      </div>
+
+      <button id="button">
+        <svg
+        class="icon"
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          role="button"
+        >
+          <path
+            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+            fill="#202733"
+          />
+        </svg>
+      </button>
+    </article>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
