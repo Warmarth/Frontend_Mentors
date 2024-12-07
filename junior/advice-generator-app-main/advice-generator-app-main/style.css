@@ -67,7 +67,6 @@ article p {
   color: var(--primary-light-cyan);
   align-items: center;
   padding: 0 1rem;
-  margin: 0 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
