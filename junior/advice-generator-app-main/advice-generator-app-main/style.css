@@ -34,7 +34,7 @@
   height: 100vh;
 }
 
-article {
+main {
   max-width: 375px;
   margin: 0 auto;
   padding: 1rem;
@@ -53,10 +53,12 @@ h1 {
   letter-spacing: 4px;
 }
 
-article div {
+main article {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
+  overflow: hidden;
 }
 
 article p {
@@ -66,6 +68,11 @@ article p {
   align-items: center;
   padding: 0 1rem;
   margin: 0 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 100%;
+  display: block;
 }
 
 .author {
@@ -104,7 +111,7 @@ button:hover .icon {
 }
 
 @media screen and (min-width: 735px) {
-  article {
+  main {
     max-width: 500px;
   }
 }

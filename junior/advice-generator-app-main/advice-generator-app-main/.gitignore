@@ -16,4 +16,4 @@
 .prettierignore
 node_modules
 config.js
-global.d.ts
+globals.d.ts
