@@ -30,13 +30,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var _a;
+const API_KEY = window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
 const button = document.querySelector("button");
 const advice = document.querySelector("#advice");
 const author = document.querySelector("#author");
 const categories = "amazing";
 const headers = new Headers({
-    "X-Api-Key": (_a = process.env.NEXT_PUBLIC_API_KEY) !== null && _a !== void 0 ? _a : window.API_KEY,
+    "X-Api-Key": API_KEY,
     "Content-Type": "application/json",
 });
 button.addEventListener("click", () => {

@@ -30,13 +30,14 @@ interface Quote {
   category?: string;
 }
 
+const API_KEY = window.API_KEY || process.env.NEXT_PUBLIC_API_KEY || "default_api_key";
 const button = <HTMLButtonElement>document.querySelector("button")!;
 const advice = <HTMLParagraphElement>document.querySelector("#advice")!;
 const author = <HTMLSpanElement>document.querySelector("#author")!;
 
 const categories = "amazing";
 const headers = new Headers({
-  "X-Api-Key": process.env.NEXT_PUBLIC_API_KEY || window.API_KEY,
+  "X-Api-Key": API_KEY,
   "Content-Type": "application/json",
 });
 
