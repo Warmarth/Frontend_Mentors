@@ -41,7 +41,7 @@ const allArticles = document.querySelectorAll(
 
 function renderData(data: Profile[]) {
   allArticles.forEach((article, index) => {
-    const title = article.querySelector(".title")! as HTMLHeadingElement;
+    const title = article.querySelector(".card-title")! as HTMLHeadingElement;
     if (title) {
       AppendData(data[index], article);
     }

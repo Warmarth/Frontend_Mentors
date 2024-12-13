@@ -198,7 +198,7 @@ body {
   border-radius: 1rem;
 }
 
-.title {
+.card-title {
   font-weight: var(--font-weight-medium);
   display: flex;
   gap: 0.5rem;
@@ -206,13 +206,13 @@ body {
   justify-content: space-between;
 }
 
-.title h2 {
+.card-title h2 {
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
   text-transform: capitalize;
 }
 
-.title img {
+.card-title img {
   cursor: pointer;
 }
 

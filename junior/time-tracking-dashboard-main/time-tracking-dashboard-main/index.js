@@ -20,7 +20,7 @@ fetchData();
 const allArticles = document.querySelectorAll("article");
 function renderData(data) {
     allArticles.forEach((article, index) => {
-        const title = article.querySelector(".title");
+        const title = article.querySelector(".card-title");
         if (title) {
             AppendData(data[index], article);
         }
