@@ -33,6 +33,7 @@ const fetchData = async () => {
     console.error("There was a problem with your fetch operation:", error);
   }
 };
+
 fetchData();
 
 const allArticles = document.querySelectorAll(

@@ -237,7 +237,7 @@ body {
 
 /* desktop */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
     display: grid;
