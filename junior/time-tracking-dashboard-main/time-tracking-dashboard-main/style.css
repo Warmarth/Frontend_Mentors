@@ -101,7 +101,7 @@ body {
   border-radius: 1rem;
 }
 
-.scheduler li {
+.scheduler span {
   cursor: pointer;
 }
 .active {
