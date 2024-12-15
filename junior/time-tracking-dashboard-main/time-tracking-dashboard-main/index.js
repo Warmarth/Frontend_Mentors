@@ -48,9 +48,12 @@ const AppendData = (data, article) => {
     if (!timeframeData)
         return;
     const current = article.querySelector(".first span");
-    const previous = article.querySelector(".previous span");
+    const previous = article.querySelector(".previous");
     if (current && previous) {
         current.textContent = timeframeData.current.toString();
-        previous.textContent = timeframeData.previous.toString();
+        previous.textContent =
+            timeframe === "daily"
+                ? `yesterday ${timeframeData.previous.toString()}hrs`
+                : `last month-${timeframeData.previous.toString()}hrs`;
     }
 };

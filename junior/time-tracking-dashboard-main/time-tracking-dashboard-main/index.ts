@@ -72,15 +72,14 @@ const AppendData = (data: Profile, article: HTMLElement) => {
   const timeframeData = data.timeframes[timeframe];
   if (!timeframeData) return;
 
-  const current = article.querySelector(
-    ".first span"
-  ) as HTMLParagraphElement | null;
-  const previous = article.querySelector(
-    ".previous span"
-  ) as HTMLParagraphElement | null;
+  const current = article.querySelector(".first span")! as HTMLParagraphElement;
+  const previous = article.querySelector(".previous")! as HTMLParagraphElement;
 
   if (current && previous) {
     current.textContent = timeframeData.current.toString();
-    previous.textContent = timeframeData.previous.toString();
+    previous.textContent =
+      timeframe === "daily"
+        ? `yesterday ${timeframeData.previous.toString()}hrs`
+        : `last month-${timeframeData.previous.toString()}hrs`;
   }
 };
